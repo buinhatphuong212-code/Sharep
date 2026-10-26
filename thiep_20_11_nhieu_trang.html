@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thiệp 20/11 — Tri ân thầy cô</title>
+<style>
+:root{--wine:#9b1c3d;--rose:#f6dfe6;--gold:#e5bd65;--ink:#4d2634}
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:#fff5f0}
+header{position:sticky;top:0;z-index:5;background:#fffaf5ee;border-bottom:1px solid #edd5c4;padding:12px 14px;backdrop-filter:blur(8px)}
+.brand{text-align:center;color:var(--wine);font-weight:bold;font-size:18px;margin-bottom:10px}
+nav{display:flex;gap:8px;overflow-x:auto;padding-bottom:3px}
+nav button{white-space:nowrap;border:1px solid #e5c2c8;background:#fff;border-radius:30px;padding:9px 13px;color:var(--wine);font:600 13px Arial;cursor:pointer}
+nav button.active{background:var(--wine);color:white}
+.page{display:none;min-height:calc(100vh - 105px);padding:24px 14px 40px;align-items:center;justify-content:center}
+.page.active{display:flex}
+.card{width:min(720px,100%);text-align:center;padding:clamp(25px,6vw,55px);border:2px solid var(--gold);border-radius:24px;background:linear-gradient(145deg,#fffdf7,#fff0f4);box-shadow:0 15px 45px #7c25401a;position:relative;overflow:hidden}
+.kicker{font:700 12px Arial;letter-spacing:.17em;color:#a45c67}
+h1{font-size:clamp(36px,8vw,62px);line-height:1.1;color:var(--wine);margin:15px 0}
+h2{font-size:clamp(28px,6vw,42px);color:var(--wine);margin:12px 0}
+.date{font:700 18px Arial;letter-spacing:.18em;color:#b18235}
+.emoji{font-size:40px;margin:15px 0}
+p{font-size:clamp(17px,3.8vw,21px);line-height:1.8}
+.signature{font-size:22px;font-style:italic;color:var(--wine);margin-top:24px}
+button.action{border:0;border-radius:30px;background:var(--wine);color:#fff;padding:13px 20px;font:700 14px Arial;cursor:pointer;margin:6px}
+.reveal{display:none;color:#9b1c3d;margin:18px auto;line-height:1.7;font-size:19px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.tile{border:1px solid #e9c8ce;border-radius:15px;padding:15px;background:#fff9f7}
+.tile b{display:block;color:var(--wine);margin-bottom:7px}
+.small{font:13px/1.6 Arial;color:#8c6b70}
+footer{text-align:center;padding:18px;color:#a77c77;font:12px Arial}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.card{padding:25px 20px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand">🌷 THIỆP ĐIỆN TỬ 20/11 🌷</div>
+ <nav aria-label="Các trang thiệp">
+  <button class="active" data-page="p1">Trang chủ</button>
+  <button data-page="p2">Lời chúc</button>
+  <button data-page="p3">Tri ân</button>
+  <button data-page="p4">Kỷ niệm</button>
+  <button data-page="p5">Bất ngờ</button>
+ </nav>
+</header>
+
+<section id="p1" class="page active">
+ <div class="card">
+  <div class="kicker">NGÀY NHÀ GIÁO VIỆT NAM</div>
+  <div class="emoji">🌸 🌼 🌸</div>
+  <h1>Tri Ân Thầy Cô</h1>
+  <div class="date">20 · 11</div>
+  <p>Tháng 11 về, mang theo những yêu thương và lòng biết ơn sâu sắc gửi đến những người đã tận tâm dìu dắt chúng em.</p>
+  <div class="signature">Kính tặng thầy cô ❤️</div>
+  <button class="action" onclick="go('p2')">Mở lời chúc →</button>
+ </div>
+</section>
+
+<section id="p2" class="page">
+ <div class="card">
+  <div class="kicker">NHỮNG LỜI CHÚC CHÂN THÀNH</div>
+  <div class="emoji">💐</div>
+  <h2>Kính chúc thầy cô</h2>
+  <p>Luôn mạnh khỏe, hạnh phúc và bình an. Chúc thầy cô giữ mãi niềm vui với nghề, tiếp tục truyền cảm hứng và chắp cánh cho bao thế hệ học trò.</p>
+  <p>Chúc mỗi ngày đến lớp đều là một ngày tràn ngập tiếng cười và yêu thương.</p>
+  <div class="signature">Chúng em luôn biết ơn thầy cô!</div>
+  <button class="action" onclick="go('p3')">Tiếp tục →</button>
+ </div>
+</section>
+
+<section id="p3" class="page">
+ <div class="card">
+  <div class="kicker">MỘT CHÚT LÒNG BIẾT ƠN</div>
+  <div class="emoji">📚 ✨</div>
+  <h2>Cảm ơn người lái đò</h2>
+  <p>Cảm ơn thầy cô vì những bài học quý giá, sự kiên nhẫn và những lời động viên đúng lúc.</p>
+  <p>Dẫu mai này đi muôn nơi, chúng em vẫn nhớ mái trường, nhớ bảng đen, phấn trắng và bóng dáng thầy cô thân thương.</p>
+  <div class="signature">Ơn thầy cô — mãi khắc ghi.</div>
+  <button class="action" onclick="go('p4')">Xem kỷ niệm →</button>
+ </div>
+</section>
+
+<section id="p4" class="page">
+ <div class="card">
+  <div class="kicker">NHỮNG ĐIỀU KHÔNG QUÊN</div>
+  <div class="emoji">🏫 🌷</div>
+  <h2>Mái trường thân yêu</h2>
+  <div class="grid">
+   <div class="tile"><b>Tiếng trống trường</b><span class="small">Gọi những tháng ngày tuổi học trò trở về.</span></div>
+   <div class="tile"><b>Bảng đen, phấn trắng</b><span class="small">Nơi bao bài học và ước mơ được viết nên.</span></div>
+   <div class="tile"><b>Lời thầy cô</b><span class="small">Theo chúng em trên mỗi chặng đường.</span></div>
+   <div class="tile"><b>Tình bạn</b><span class="small">Làm những năm tháng đến trường thêm đẹp.</span></div>
+  </div>
+  <button class="action" onclick="go('p5')">Một điều bất ngờ →</button>
+ </div>
+</section>
+
+<section id="p5" class="page">
+ <div class="card">
+  <div class="kicker">DÀNH RIÊNG CHO THẦY CÔ</div>
+  <div class="emoji">🎁 🌹 🎁</div>
+  <h2>Một lời nhắn từ trái tim</h2>
+  <p>Thầy cô không chỉ trao kiến thức, mà còn gieo vào chúng em niềm tin và lòng tử tế.</p>
+  <button class="action" id="revealBtn">Nhấn để mở lời nhắn 💌</button>
+  <div class="reveal" id="reveal">“Cảm ơn thầy cô đã luôn tin tưởng và yêu thương chúng em. Chúc thầy cô một ngày 20/11 thật ấm áp, ý nghĩa và ngập tràn hạnh phúc!”<br><b>Chúng em kính yêu thầy cô.</b></div>
+  <div class="signature">Happy Vietnamese Teachers’ Day!</div>
+  <button class="action" onclick="go('p1')">↶ Về trang đầu</button>
+ </div>
+</section>
+<footer>Thiệp 20/11 · Gửi yêu thương đến thầy cô 🌺</footer>
+<script>
+function go(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));
+ document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+document.getElementById('revealBtn').addEventListener('click',()=>{
+ const box=document.getElementById('reveal');
+ box.style.display=box.style.display==='block'?'none':'block';
+});
+</script>
+</body>
+</html>
